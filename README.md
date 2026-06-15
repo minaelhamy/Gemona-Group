@@ -26,29 +26,36 @@ http://localhost:8000
 ## Deploy Through GitHub And Namecheap
 
 1. Create a GitHub repository, for example `gemona-group-website`.
-2. In this folder, initialize and push the repository:
+2. Confirm the cPanel document root for the domain or subdomain. In cPanel, open **Domains** and check the **Document Root** for `gemonagroup`. The deploy path in `.cpanel.yml` must match that folder.
+3. If needed, edit this line in `.cpanel.yml`:
+
+```yaml
+- export DEPLOYPATH=/home/shargtvh/gemonagroup/
+```
+
+For an addon domain, cPanel may instead show something like:
+
+```yaml
+- export DEPLOYPATH=/home/shargtvh/public_html/gemonagroup/
+```
+
+4. In this folder, initialize and push the repository:
 
 ```bash
 git init
-git add index.html styles.css script.js assets README.md
+git add .cpanel.yml index.html styles.css script.js assets README.md
 git commit -m "Launch Gemona Group website"
 git branch -M main
 git remote add origin https://github.com/YOUR_USERNAME/gemona-group-website.git
 git push -u origin main
 ```
 
-3. Log in to Namecheap cPanel.
-4. Open **Git Version Control**.
-5. Choose **Create**.
-6. Use the GitHub clone URL for the repository.
-7. Set the deployment path to the domain document root, usually:
-
-```text
-/home/USERNAME/public_html
-```
-
-8. Pull or deploy the repository from cPanel.
-9. Confirm that `index.html`, `styles.css`, `script.js`, and the `assets` folder are directly inside `public_html`.
+5. Log in to Namecheap cPanel.
+6. Open **Git Version Control**.
+7. If the repository already exists in cPanel, open **Manage**.
+8. Click **Update from Remote** to pull the latest commit with `.cpanel.yml`.
+9. Click **Deploy HEAD Commit**.
+10. Confirm that `index.html`, `styles.css`, `script.js`, and the `assets` folder are directly inside the domain document root.
 
 ## Alternative Manual Upload
 
