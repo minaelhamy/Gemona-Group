@@ -2,7 +2,13 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/shargtvh/gemonagroup/
+    - export LOGFILE=/home/shargtvh/gemona-deploy.log
+    - /bin/date > $LOGFILE
+    - /bin/echo "Starting Gemona Group deployment" >> $LOGFILE
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH/assets
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp styles.css $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
-    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R assets/. $DEPLOYPATH/assets/
+    - /bin/echo "Deployment finished" >> $LOGFILE
