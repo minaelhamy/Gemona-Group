@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/shargtvh/gemonagroup/
+    - export DEPLOYPATH=/home/shargtvh/gemonagroup.com/
     - export LOGFILE=/home/shargtvh/gemona-deploy.log
     - /bin/date > $LOGFILE
     - /bin/echo "Starting Gemona Group deployment" >> $LOGFILE
