@@ -89,8 +89,70 @@ a {
   opacity: 0.86;
 }
 
-.site-nav a:hover {
+.site-nav a:hover,
+.nav-dropdown-toggle:hover {
   opacity: 1;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  opacity: 0.86;
+}
+
+.nav-dropdown-toggle span {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 180ms ease;
+}
+
+.nav-dropdown.is-open .nav-dropdown-toggle span {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  display: none;
+  width: max-content;
+  min-width: 230px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 18px 40px rgba(33, 21, 47, 0.16);
+  transform: translateX(-50%);
+}
+
+.nav-dropdown.is-open .nav-dropdown-menu {
+  display: grid;
+}
+
+.nav-dropdown-menu a {
+  padding: 10px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a:focus-visible {
+  background: var(--gemona-soft);
 }
 
 .nav-toggle {
@@ -170,13 +232,6 @@ a {
   text-transform: uppercase;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 30px;
-}
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -232,13 +287,167 @@ p {
   margin: 0;
 }
 
+section h2 + p {
+  margin-top: clamp(24px, 3vw, 36px);
+}
+
+.ceo-letter .section-kicker + p {
+  margin-top: clamp(24px, 3vw, 36px);
+}
+
 .intro-band {
   background: var(--white);
   border-bottom: 1px solid var(--line);
 }
 
+.about {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(221, 183, 38, 0.1), transparent 28%),
+    var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.purpose {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(221, 183, 38, 0.15), transparent 28%),
+    radial-gradient(circle at 8% 72%, rgba(106, 76, 137, 0.2), transparent 32%),
+    var(--gemona-ink);
+}
+
+.purpose::before {
+  content: "G";
+  position: absolute;
+  top: -110px;
+  right: -10px;
+  color: rgba(255, 255, 255, 0.025);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(22rem, 45vw, 42rem);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.purpose .section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
+  gap: clamp(32px, 7vw, 90px);
+  align-items: end;
+}
+
+.values-heading h2 {
+  color: var(--white);
+}
+
+.about-heading > p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 0;
+}
+
+.purpose-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+}
+
+.purpose-card > span {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  color: rgba(255, 255, 255, 0.08);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.purpose-card h3 {
+  max-width: 480px;
+  margin: 28px 0 18px;
+  color: var(--white);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+  font-weight: 650;
+}
+
+.purpose-card > p:last-child {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.vision-card {
+  background: rgba(255, 255, 255, 0.075);
+}
+
+.mission-card {
+  background: linear-gradient(145deg, rgba(221, 183, 38, 0.16), rgba(255, 255, 255, 0.05));
+}
+
+.values-heading {
+  max-width: 760px;
+  margin: clamp(64px, 9vw, 110px) auto 36px;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.values-grid article {
+  display: flex;
+  gap: 18px;
+  min-height: 190px;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.055);
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.values-grid article:hover {
+  border-color: rgba(221, 183, 38, 0.48);
+  background: rgba(255, 255, 255, 0.085);
+  transform: translateY(-3px);
+}
+
+.values-grid article > strong {
+  flex: 0 0 auto;
+  color: var(--gold);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.values-grid h3 {
+  color: var(--white);
+}
+
+.values-grid p {
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.9rem;
+}
+
 .intro-grid,
-.commodities-layout,
 .contact-layout,
 .reach-layout {
   display: grid;
@@ -250,6 +459,7 @@ p {
 .intro-grid > p,
 .origin-copy p,
 .seedi-copy p,
+.ids-copy p,
 .reach-layout p,
 .contact-panel p {
   color: var(--muted);
@@ -262,6 +472,7 @@ p {
 
 .origin-layout,
 .seedi-layout,
+.ids-layout,
 .ceo-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -320,15 +531,6 @@ p {
   min-height: 270px;
 }
 
-.commodities {
-  background: var(--gemona);
-  color: var(--white);
-}
-
-.commodities h2 {
-  color: var(--white);
-}
-
 .commodity-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -356,7 +558,10 @@ p {
 }
 
 .seedi-layout {
+  display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(34px, 6vw, 76px);
+  align-items: center;
 }
 
 .seedi-visual {
@@ -366,17 +571,19 @@ p {
 }
 
 .seedi-logo {
-  width: min(66%, 310px);
+  width: 100%;
+  height: 160px;
   padding: 20px;
   border-radius: 8px;
   background: var(--white);
   box-shadow: var(--shadow);
+  object-fit: contain;
 }
 
-.seedi-image {
+.seedi-image,
+.ids-image {
   width: 100%;
-  height: auto;
-  max-height: 340px;
+  height: clamp(270px, 30vw, 340px);
   object-fit: cover;
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -384,6 +591,35 @@ p {
 
 .seedi-copy h2 {
   color: var(--seedi);
+}
+
+.seedi-button {
+  margin-top: 28px;
+}
+
+.seedi-portfolio {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+  gap: clamp(32px, 7vw, 86px);
+  align-items: center;
+  margin-top: clamp(54px, 8vw, 92px);
+  padding: clamp(28px, 5vw, 54px);
+  border-radius: 10px;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(221, 183, 38, 0.18), transparent 34%),
+    var(--seedi);
+  box-shadow: var(--shadow);
+}
+
+.seedi-portfolio h2 {
+  color: var(--white);
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+}
+
+.seedi-portfolio .commodity-list li {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .seedi-tags {
@@ -401,6 +637,69 @@ p {
   background: rgba(255, 255, 255, 0.72);
   font-size: 0.84rem;
   font-weight: 800;
+}
+
+.ids {
+  color: var(--white);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(221, 183, 38, 0.18), transparent 30%),
+    linear-gradient(135deg, var(--gemona-ink) 0%, var(--gemona) 56%, #51366d 100%);
+}
+
+.ids-layout {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+}
+
+.ids-visual {
+  display: grid;
+  gap: 18px;
+  align-content: center;
+}
+
+.ids-mark {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 26px;
+  border-left: 6px solid var(--gold);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: var(--white);
+  background: rgba(33, 21, 47, 0.72);
+  box-shadow: 0 24px 70px rgba(16, 9, 24, 0.3);
+}
+
+.ids-mark span {
+  display: block;
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ids-mark strong {
+  display: block;
+  margin: 2px 0 4px;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(3.8rem, 8vw, 6.6rem);
+  line-height: 0.95;
+}
+
+.ids-copy h2 {
+  color: var(--white);
+}
+
+.ids-copy p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.ids-button {
+  margin-top: 28px;
 }
 
 .strategy {
@@ -510,6 +809,10 @@ p {
   box-shadow: 0 18px 48px rgba(33, 21, 47, 0.11);
 }
 
+.reach-copy p + p {
+  margin-top: 18px;
+}
+
 .contact {
   background: var(--gemona-ink);
   color: var(--white);
@@ -520,15 +823,120 @@ p {
 }
 
 .contact-panel {
+  position: relative;
+  overflow: hidden;
   padding: clamp(24px, 4vw, 42px);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.05));
 }
 
-.contact-panel p {
+.contact-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gold);
+}
+
+.contact-panel .contact-intro {
   margin-bottom: 24px;
   color: rgba(255, 255, 255, 0.82);
+}
+
+.contact-details {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.contact-item:hover,
+.contact-item:focus-visible {
+  border-color: rgba(221, 183, 38, 0.65);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(3px);
+}
+
+.contact-item small {
+  display: block;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-icon {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--gemona-ink);
+  background: var(--gold);
+  font-weight: 900;
+}
+
+.contact-icon svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.social-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.social-icons {
+  display: flex;
+  gap: 9px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .site-footer {
@@ -557,13 +965,19 @@ p {
   }
 
   .intro-grid,
+  .about-heading,
   .origin-layout,
   .seedi-layout,
-  .commodities-layout,
+  .seedi-portfolio,
+  .ids-layout,
   .ceo-layout,
   .reach-layout,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .capability-grid article {
@@ -609,6 +1023,35 @@ p {
     border-top: 1px solid var(--line);
   }
 
+  .nav-dropdown {
+    width: 100%;
+    border-top: 1px solid var(--line);
+  }
+
+  .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 0;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    padding: 0 0 4px 14px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .nav-dropdown-menu a {
+    padding: 10px 12px;
+    border-top: 0;
+    border-left: 2px solid var(--gold);
+    white-space: normal;
+  }
+
   .hero {
     min-height: 88vh;
   }
@@ -627,7 +1070,6 @@ p {
     font-size: clamp(3.3rem, 15vw, 5rem);
   }
 
-  .hero-actions,
   .button {
     width: 100%;
   }
@@ -637,22 +1079,36 @@ p {
   }
 
   .capability-grid,
+  .purpose-grid,
+  .values-grid,
   .strategy-grid,
   .commodity-list {
     grid-template-columns: 1fr;
   }
 
   .seedi-logo {
-    width: min(250px, 72%);
+    width: 100%;
+    height: 150px;
     padding: 18px;
   }
 
-  .seedi-image {
+  .ids-mark {
     width: 100%;
-    max-height: none;
+    height: 150px;
+  }
+
+  .seedi-image,
+  .ids-image {
+    width: 100%;
+    height: clamp(240px, 68vw, 340px);
   }
 
   .footer-layout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .social-area {
     align-items: flex-start;
     flex-direction: column;
   }

@@ -54,11 +54,26 @@
         <span></span>
       </button>
       <nav class="site-nav" data-nav>
-        <a href="#origin">Origin</a>
+        <a href="#about">About GEMONA</a>
         <a href="#group">Group</a>
-        <a href="#seedi">Seedi</a>
-        <a href="#ceo">CEO Letter</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-dropdown" data-nav-dropdown>
+          <button
+            class="nav-dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="business-menu"
+            data-dropdown-toggle
+          >
+            Businesses
+            <span aria-hidden="true"></span>
+          </button>
+          <div class="nav-dropdown-menu" id="business-menu">
+            <a href="#seedi">Seedi</a>
+            <a href="#ids">International Diplomatic Supplies</a>
+          </div>
+        </div>
+        <a href="#ceo">Welcome Note</a>
+        <a href="#contact">Contact Us</a>
       </nav>
     </header>
 
@@ -73,25 +88,64 @@
             Built on trust, driven by partnerships. An Egyptian joint stock company connecting resilient
             supply, disciplined distribution, and long-term institutional confidence.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#group">Explore the group</a>
-            <a class="button ghost" href="#ceo">Read the CEO letter</a>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="section-inner">
+          <div class="about-heading">
+            <div>
+              <p class="section-kicker">About GEMONA</p>
+              <h2>Purpose in every product. Integrity in every partnership.</h2>
+            </div>
+            <p>
+              Established in 2022 under the laws of the Arab Republic of Egypt, GEMONA is an Egyptian
+              joint stock company serving the agricultural commodities and FMCG sectors, with growing
+              capabilities in construction materials. We connect international expertise with local market
+              understanding to build reliable supply chains and lasting value.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="intro-band" aria-label="Company overview">
-        <div class="section-inner intro-grid">
-          <div>
-            <p class="section-kicker">Incorporated in Egypt in 2022</p>
-            <h2>A trusted platform for strategic commodity movement.</h2>
+      <section class="purpose" id="purpose">
+        <div class="section-inner">
+          <div class="purpose-grid">
+            <article class="purpose-card vision-card">
+              <span>01</span>
+              <p class="section-kicker">Our Vision</p>
+              <h3>A benchmark of excellence and integrity.</h3>
+              <p>
+                To become a benchmark of excellence and integrity in every home and every project - driven
+                by passion and trusted for the delivery of quality food products and reliable building
+                materials.
+              </p>
+            </article>
+            <article class="purpose-card mission-card">
+              <span>02</span>
+              <p class="section-kicker">Our Mission</p>
+              <h3>Everyday value, delivered with purpose.</h3>
+              <p>
+                We provide families with safe, nourishing food products and dependable building materials
+                through an unwavering commitment to quality, efficiency, and trust. By fostering robust,
+                long-term relationships and exceeding customer requirements, every product we deliver
+                supports healthier living and stronger foundations.
+              </p>
+            </article>
           </div>
-          <p>
-            Gemona Trading & Investments S.A.E. was established to become a trusted Egyptian exporter,
-            importer, and distributor across agri commodities and FMCG. The group combines international
-            trading relationships, value-add processing knowledge, marketplace reach, and local
-            distribution capability to serve institutions, distributors, and consumer channels.
-          </p>
+
+          <div class="values-heading">
+            <p class="section-kicker">Our Values</p>
+            <h2>The principles behind the name GEMONA.</h2>
+          </div>
+          <div class="values-grid">
+            <article><strong>G</strong><div><h3>Growth</h3><p>Sustainable progress that creates lasting value for our partners and communities.</p></div></article>
+            <article><strong>E</strong><div><h3>Empowerment</h3><p>Operational excellence that enables people, partners, and communities to thrive responsibly.</p></div></article>
+            <article><strong>M</strong><div><h3>Motivation</h3><p>Purpose, passion, and close attention to detail that move every task beyond expectation.</p></div></article>
+            <article><strong>O</strong><div><h3>Optimism</h3><p>A positive, objective-led mindset focused on timely, meaningful, and effective outcomes.</p></div></article>
+            <article><strong>N</strong><div><h3>Nobility</h3><p>Noble conduct, principled decisions, continuous innovation, and originality in everything we do.</p></div></article>
+            <article><strong>A</strong><div><h3>Accountability</h3><p>Integrity, ownership, agility, and the confidence to pursue excellence in every action.</p></div></article>
+          </div>
         </div>
       </section>
 
@@ -120,7 +174,7 @@
             <article>
               <span>02</span>
               <h3>Trade Discipline</h3>
-              <p>Its role in freight, customs, and exchange made it a practical commercial crossroads.</p>
+              <p>Its role in freight, customs, and exchange made it a practical commercial crossroad.</p>
             </article>
             <article>
               <span>03</span>
@@ -141,8 +195,8 @@
             <article>
               <h3>Strategic Trading</h3>
               <p>
-                Import, export, and distribution of essential agri commodities with a portfolio centered
-                on sugar, wheat, rice, oils, coffee, nuts, pulses, and related FMCG categories.
+                Import, export, and distribution of essential agri-commodities with a portfolio centered
+                on sugar, wheat, rice, oils, coffee, and related FMCG categories.
               </p>
             </article>
             <article>
@@ -170,45 +224,76 @@
         </div>
       </section>
 
-      <section class="commodities" aria-label="Strategic commodities">
-        <div class="section-inner commodities-layout">
-          <div>
-            <p class="section-kicker">Core portfolio</p>
-            <h2>Essential goods. Practical channels. Reliable partners.</h2>
+      <section class="seedi" id="seedi">
+        <div class="section-inner">
+          <div class="seedi-layout">
+            <div class="seedi-visual">
+              <img class="seedi-logo" src="assets/seedi-logo.png" alt="Seedi">
+              <img class="seedi-image" src="assets/products-inspired-from-nature.jpeg" alt="Natural agri products">
+            </div>
+            <div class="seedi-copy">
+              <p class="section-kicker">Our local brand</p>
+              <h2>Seedi brings the group closer to consumers and channel partners.</h2>
+              <p>
+                SEEDI is GEMONA’s private-label brand for a selected agricultural commodity and FMCG product
+                portfolio, offering exceptional quality across categories including rice, sugar, oils, coffee
+                and flour. Built on controlled sourcing, careful supplier selection, and consistent quality
+                standards, SEEDI combines GEMONA’s trading expertise with a strong understanding of the
+                Egyptian market to deliver trusted everyday products with lasting value.
+              </p>
+              <div class="seedi-tags">
+                <span>Final consumers</span>
+                <span>Distributors</span>
+                <span>Wholesalers</span>
+                <span>HORECA procurement</span>
+              </div>
+              <a class="button primary seedi-button" href="https://www.seedi.co/">
+                Click here to read more about Seedi
+              </a>
+            </div>
           </div>
-          <ul class="commodity-list">
-            <li>Sugar</li>
-            <li>Wheat</li>
-            <li>Sunflower oil</li>
-            <li>Cooking oil</li>
-            <li>Coffee beans</li>
-            <li>Olive oil</li>
-            <li>Rice</li>
-            <li>Nuts</li>
-          </ul>
+          <div class="seedi-portfolio">
+            <div>
+              <p class="section-kicker">SEEDI core portfolio</p>
+              <h2>Essential goods. Practical channels. Reliable quality.</h2>
+            </div>
+            <ul class="commodity-list">
+              <li>Sugar</li>
+              <li>Wheat</li>
+              <li>Sunflower oil</li>
+              <li>Cooking oil</li>
+              <li>Coffee beans</li>
+              <li>Rice</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="seedi" id="seedi">
-        <div class="section-inner seedi-layout">
-          <div class="seedi-visual">
-            <img class="seedi-logo" src="assets/seedi-logo.png" alt="Seedi">
-            <img class="seedi-image" src="assets/products-inspired-from-nature.jpeg" alt="Natural agri products">
-          </div>
-          <div class="seedi-copy">
-            <p class="section-kicker">Our local brand</p>
-            <h2>Seedi brings the group closer to consumers and channel partners.</h2>
-            <p>
-              Seedi is Gemona's local brand for selected agri commodities and FMCG products. It is built
-              around nature's bounty, controlled sourcing, and dependable everyday quality across categories
-              such as rice, sugar, pulses, spices, oils, coffee, pasta, flour, nuts, and tahina.
-            </p>
-            <div class="seedi-tags">
-              <span>Final consumers</span>
-              <span>Distributors</span>
-              <span>Wholesalers</span>
-              <span>HORECA procurement</span>
+      <section class="ids" id="ids">
+        <div class="section-inner ids-layout">
+          <div class="ids-visual">
+            <div class="ids-mark" aria-label="Gemona International Diplomatic Supplies">
+              <span>Gemona</span>
+              <strong>IDS</strong>
             </div>
+            <img
+              class="ids-image"
+              src="assets/ids-diplomatic-supplies.jpg"
+              alt="Organized international diplomatic supplies ready for coordinated delivery"
+            >
+          </div>
+          <div class="ids-copy">
+            <p class="section-kicker">International Diplomatic Supplies</p>
+            <h2>Dedicated supply support for international and diplomatic requirements.</h2>
+            <p>
+              Gemona International Diplomatic Supplies brings the group's sourcing discipline,
+              dependable coordination, and international outlook to the specialized needs of diplomatic
+              missions and international organizations. The service is designed around responsive support,
+              trusted supply relationships, and careful delivery from request to fulfillment.
+            </p>
+            <a class="button primary ids-button" href="https://ids.gemonagroup.com/">
+              Click here to read more about GEMONA IDS
+            </a>
           </div>
         </div>
       </section>
@@ -221,15 +306,27 @@
           <div class="strategy-grid">
             <article>
               <h3>Marketplace Association</h3>
-              <p>Building channel access through recognized marketplaces and fulfillment centers.</p>
+              <p>
+                Expanding GEMONA’s market reach through established marketplaces, distribution channels,
+                and fulfillment networks that improve product accessibility, support efficient delivery,
+                and strengthen our connection with customers.
+              </p>
             </article>
             <article>
               <h3>Export Synergies</h3>
-              <p>Developing sustainable export opportunities that strengthen import activities.</p>
+              <p>
+                Building sustainable export channels that connect competitive Egyptian products with
+                international markets, while creating stronger trade flows that complement and support the
+                Group’s sourcing and import activities.
+              </p>
             </article>
             <article>
               <h3>Brand Ownership</h3>
-              <p>Launching selected branded portfolios to secure quality and customer confidence.</p>
+              <p>
+                Developing and managing selected private-label brands that give GEMONA greater control over
+                sourcing, quality, packaging, and market positioning - helping us offer products our customers
+                can trust, feel confident choosing, and continue to rely on every day.
+              </p>
             </article>
           </div>
         </div>
@@ -238,15 +335,14 @@
       <section class="ceo" id="ceo">
         <div class="section-inner ceo-layout">
           <div class="ceo-photo-wrap">
-            <img src="assets/hany-william.jpg" alt="Hany William, CEO of Gemona Group">
+            <img src="assets/hany-william.jpg" alt="Hani Ibrahim, Chairman and CEO of Gemona Group">
           </div>
           <div class="ceo-letter">
             <p class="section-kicker">Welcome letter</p>
-            <h2>From Hany William, CEO</h2>
             <p>
               Welcome to Gemona Group. We founded Gemona with a clear belief: essential goods deserve
               dependable systems, transparent partnerships, and the discipline to keep serving markets
-              through changing cycles.
+              through continuous changing cycles.
             </p>
             <p>
               Our name carries the spirit of Gemona del Friuli, a town shaped by trade routes and remembered
@@ -254,23 +350,31 @@
               who value long-term strength over short-term movement.
             </p>
             <p>
-              As we expand across Egypt and develop international opportunities, we remain committed to
-              quality, governance, and partnerships worthy of the people and organizations who place
-              their confidence in us.
+              As we continue to grow across Egypt and pursue new opportunities internationally, we remain
+              firmly committed to quality, strong governance, and lasting partnerships—built on trust and
+              worthy of the confidence placed in GEMONA by the people and organizations we serve.
             </p>
-            <p class="signature">Hany William<br><span>Chief Executive Officer</span></p>
+            <p class="signature">Hani Ibrahim<br><span>Chairman &amp; CEO</span></p>
           </div>
         </div>
       </section>
 
       <section class="reach" aria-label="Global reach">
         <div class="section-inner reach-layout">
-          <div>
+          <div class="reach-copy">
             <p class="section-kicker">Global perspective</p>
             <h2>Associated with recognized trading setups across the globe.</h2>
             <p>
-              Gemona's model is built to connect international supply with Egyptian demand, while creating
-              export opportunities that support the group's import and distribution activities.
+              GEMONA’s trading model is built around connecting reliable international supply sources with
+              the evolving needs of the Egyptian market, while creating new channels for Egyptian products
+              to reach regional and international buyers.
+            </p>
+            <p>
+              Through relationships with established producers, suppliers, traders, and distribution
+              partners across key markets, GEMONA is developing an integrated platform that supports
+              sourcing, importation, distribution, and export under one coordinated commercial structure.
+              This balanced approach allows the Group to strengthen supply continuity, broaden its product
+              portfolio, and respond more effectively to market opportunities.
             </p>
           </div>
           <img src="assets/world-map.jpeg" alt="World map indicating global trade reach">
@@ -284,11 +388,37 @@
             <h2>Let us build resilient trade together.</h2>
           </div>
           <div class="contact-panel">
-            <p>
+            <p class="contact-intro">
               Gemona Group welcomes serious conversations around trade, supply partnerships,
               distribution growth, export development, and selected diversification opportunities.
             </p>
-            <a class="button primary" href="mailto:info@gemonagroup.com">info@gemonagroup.com</a>
+            <div class="contact-details">
+              <a class="contact-item" href="mailto:info@gemonagroup.com">
+                <span class="contact-icon" aria-hidden="true">@</span>
+                <span><small>Email us</small>info@gemonagroup.com</span>
+              </a>
+              <a class="contact-item" href="tel:+20225363172">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7.2 3.5 9.8 8l-2 2a15.5 15.5 0 0 0 6.2 6.2l2-2 4.5 2.6-.8 3.1c-.2.7-.8 1.1-1.5 1.1A15.2 15.2 0 0 1 3 5.8c0-.7.4-1.3 1.1-1.5l3.1-.8Z"/></svg>
+                </span>
+                <span><small>Call us</small>+20225363172</span>
+              </a>
+              <a class="contact-item" href="tel:+201205722213">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7.2 3.5 9.8 8l-2 2a15.5 15.5 0 0 0 6.2 6.2l2-2 4.5 2.6-.8 3.1c-.2.7-.8 1.1-1.5 1.1A15.2 15.2 0 0 1 3 5.8c0-.7.4-1.3 1.1-1.5l3.1-.8Z"/></svg>
+                </span>
+                <span><small>Call us</small>+201205722213</span>
+              </a>
+            </div>
+            <div class="social-area">
+              <span>Follow GEMONA</span>
+              <div class="social-icons" aria-label="Gemona social media channels">
+                <span class="social-icon" role="img" aria-label="Instagram" title="Instagram">IG</span>
+                <span class="social-icon" role="img" aria-label="Twitter" title="Twitter">X</span>
+                <span class="social-icon" role="img" aria-label="Facebook" title="Facebook">f</span>
+                <span class="social-icon" role="img" aria-label="LinkedIn" title="LinkedIn">in</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -297,7 +427,6 @@
     <footer class="site-footer">
       <div class="section-inner footer-layout">
         <img src="assets/gemona-logo.png" alt="Gemona Group">
-        <p>Built on trust ... driven by partnerships.</p>
         <p>&copy; <span data-year></span> Gemona Trading & Investments S.A.E.</p>
       </div>
     </footer>
