@@ -267,7 +267,7 @@ section:not(.hero) {
 
 h2 {
   margin: 0;
-  color: var(--gemona-ink);
+  color: var(--gemona);
   font-family: "Source Serif 4", Georgia, serif;
   font-size: clamp(2rem, 3.6vw, 3.55rem);
   font-weight: 650;
@@ -285,6 +285,23 @@ h3 {
 
 p {
   margin: 0;
+  text-align: left;
+}
+
+section p:not(.section-kicker):not(.signature):not(.contact-intro) {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+section h2,
+section h3,
+.section-kicker {
+  text-align: left;
+}
+
+section .section-kicker {
+  color: var(--gold);
 }
 
 section h2 + p {
@@ -312,23 +329,7 @@ section h2 + p {
   position: relative;
   overflow: hidden;
   color: var(--white);
-  background:
-    radial-gradient(circle at 92% 8%, rgba(221, 183, 38, 0.15), transparent 28%),
-    radial-gradient(circle at 8% 72%, rgba(106, 76, 137, 0.2), transparent 32%),
-    var(--gemona-ink);
-}
-
-.purpose::before {
-  content: "G";
-  position: absolute;
-  top: -110px;
-  right: -10px;
-  color: rgba(255, 255, 255, 0.025);
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: clamp(22rem, 45vw, 42rem);
-  font-weight: 700;
-  line-height: 1;
-  pointer-events: none;
+  background: var(--gemona-ink);
 }
 
 .purpose .section-inner {
@@ -368,17 +369,6 @@ section h2 + p {
   border-radius: 8px;
 }
 
-.purpose-card > span {
-  position: absolute;
-  top: 16px;
-  right: 24px;
-  color: rgba(255, 255, 255, 0.08);
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 6rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
 .purpose-card h3 {
   max-width: 480px;
   margin: 28px 0 18px;
@@ -393,18 +383,15 @@ section h2 + p {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.vision-card {
-  background: rgba(255, 255, 255, 0.075);
-}
-
+.vision-card,
 .mission-card {
-  background: linear-gradient(145deg, rgba(221, 183, 38, 0.16), rgba(255, 255, 255, 0.05));
+  background: rgba(255, 255, 255, 0.075);
 }
 
 .values-heading {
   max-width: 760px;
-  margin: clamp(64px, 9vw, 110px) auto 36px;
-  text-align: center;
+  margin: clamp(64px, 9vw, 110px) 0 36px;
+  text-align: left;
 }
 
 .values-grid {
@@ -590,7 +577,13 @@ section h2 + p {
 }
 
 .seedi-copy h2 {
-  color: var(--seedi);
+  color: var(--gemona);
+}
+
+.origin .section-kicker,
+.seedi .section-kicker,
+.ids .section-kicker {
+  color: var(--gold);
 }
 
 .seedi-button {
@@ -606,9 +599,7 @@ section h2 + p {
   padding: clamp(28px, 5vw, 54px);
   border-radius: 10px;
   color: var(--white);
-  background:
-    radial-gradient(circle at 90% 10%, rgba(221, 183, 38, 0.18), transparent 34%),
-    var(--seedi);
+  background: var(--gemona);
   box-shadow: var(--shadow);
 }
 
@@ -706,23 +697,7 @@ section h2 + p {
   position: relative;
   overflow: hidden;
   color: var(--white);
-  background: var(--gemona-ink);
-}
-
-.strategy > img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.22;
-}
-
-.strategy::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(33, 21, 47, 0.96), rgba(33, 21, 47, 0.78));
+  background: var(--gemona);
 }
 
 .strategy-content {
@@ -800,6 +775,10 @@ section h2 + p {
 .reach {
   background: var(--gemona-soft);
   padding-bottom: clamp(96px, 10vw, 150px);
+}
+
+.reach .section-kicker {
+  color: var(--gold);
 }
 
 .reach-layout img {
