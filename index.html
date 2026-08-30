@@ -64,8 +64,8 @@
             aria-controls="business-menu"
             data-dropdown-toggle
           >
-            Businesses
-            <span aria-hidden="true"></span>
+            <span class="nav-dropdown-label" data-nav-business-label>Businesses</span>
+            <span class="nav-dropdown-arrow" aria-hidden="true"></span>
           </button>
           <div class="nav-dropdown-menu" id="business-menu">
             <a href="#international-trading">International Trading</a>
@@ -75,6 +75,9 @@
         </div>
         <a href="#ceo">Welcome Letter</a>
         <a href="#contact">Contact Us</a>
+        <button class="language-switch" type="button" data-language-toggle aria-label="عرض الموقع باللغة العربية">
+          العربية
+        </button>
       </nav>
     </header>
 
@@ -146,7 +149,7 @@
       <section class="origin" id="origin">
         <div class="section-inner origin-layout">
           <div class="origin-copy">
-            <p class="section-kicker">The name behind the group</p>
+            <p class="section-kicker">The Meaning Behind GEMONA</p>
             <h2>Inspired by a town that traded, rebuilt, and endured.</h2>
             <p>
               GEMONA takes its name from Gemona del Friuli, the historic Italian town known for its strategic
@@ -164,7 +167,7 @@
             <article>
               <span>02</span>
               <h3>Business Discipline</h3>
-              <p>A town built strategic geographical positioning, financial strength and strong exchange capabilities.</p>
+              <p>A town built on strategic geographical positioning, financial strength and strong exchange capabilities.</p>
             </article>
             <article>
               <span>03</span>
@@ -281,7 +284,7 @@
             </div>
             <ul class="commodity-list">
               <li>Sugar</li>
-              <li>Wheat</li>
+              <li>Wheat Flour</li>
               <li>Vegetable oils</li>
               <li>Rice</li>
             </ul>
@@ -423,7 +426,7 @@
     <footer class="site-footer">
       <div class="section-inner footer-layout">
         <img src="assets/gemona-logo.png" alt="Gemona Group">
-        <p>&copy; <span data-year></span> Gemona Trading & Investments S.A.E.</p>
+        <p>&copy; <span data-year></span> <span data-footer-company>Gemona Trading &amp; Investments S.A.E.</span></p>
       </div>
     </footer>
 
